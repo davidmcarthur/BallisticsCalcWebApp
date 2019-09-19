@@ -1,0 +1,70 @@
+﻿@model BallisticsCalcApp.Models.Ballistics
+
+@{
+    ViewBag.Title = "Result";
+
+}
+
+<h2>Shot Calculator</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Bullet Drop</title>
+</head>
+<body>
+    <div>
+
+        <h2>Input Projectile Characteristics</h2>
+        <p>
+            <lable>Velocity of projectile (fps): </lable>
+            @Html.DisplayFor(model => model.velocity)
+        </p>
+
+        <p>
+            <lable>Projectile Mass (grains): </lable>
+            @Html.DisplayFor(model => model.mass)
+        </p>
+
+        <p>
+            <lable>Projectile Diameter (inch caliber): </lable>
+            @Html.DisplayFor(model => model.diameter)
+        </p>
+
+        <h2>Input Shot Characteristics</h2>
+        <p>
+            <lable>Distance to Target (m): </lable>
+            @Html.DisplayFor(model => model.distance)
+        </p>
+        <p>
+            <lable>Ambient Temperature (F): </lable>
+            @Html.DisplayFor(model => model.tempFarenheit)
+        </p>
+
+        <h2>Return Data</h2>
+        <p>
+            <label>Air Density calculated to: </label>
+            @Html.DisplayFor(model => model.sAirDensity)
+        </p>
+        <p>
+            <label>Projectile Area calculated to:</label>
+            @Html.DisplayFor(model => model.areaMeters)
+        </p>
+        <p>
+            <label>Velocity in Meter/s calculated to:</label>
+            @Html.DisplayFor(model => model.meterVelocity)
+        </p>
+        <p>
+            <label>Temperature Celsius calculated to:</label>
+            @Html.DisplayFor(model => model.tempCelcius)
+        </p>
+
+
+        @Html.ActionLink("Back", "Index")
+
+
+    </div>
+</body>
+</html>
